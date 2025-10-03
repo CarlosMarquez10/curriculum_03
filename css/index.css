@@ -1,0 +1,258 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', Arial, sans-serif;
+  height: 100%;
+  padding: 40px;
+  background-color: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+main {
+  width: 100%;
+  max-width: 1200px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 10px;
+  /* border: 1px solid #000; */
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+
+
+aside {
+  width: 100%;
+  padding: 20px;
+  background: #202020;
+  color: aliceblue;
+}
+
+img {
+  border-radius: 50%;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.divider {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(to right, transparent, rgba(255,255,255,0.4), transparent);
+  margin: 16px 0;
+}
+.content-info {
+  width: 100%;
+  padding: 20px 24px;
+  background: #ffffff;
+  border-radius: 6px;
+  box-shadow: inset 0 -1px 0 rgba(0,0,0,0.15);
+}
+
+.content-info p {
+  color: #333;
+  margin: 0 0 12px;
+  line-height: 1.5;
+}
+
+.section-title {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #111;
+  margin: 0;
+}
+
+.resume-divider {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(to right, rgba(0,0,0,0.35), rgba(0,0,0,0.1));
+  margin: 8px 0 12px;
+}
+
+.resume-section {
+  margin-bottom: 12px;
+}
+
+.section-subtitle {
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #111;
+  margin: 0 0 6px;
+}
+
+.entry {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  align-items: start;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.15);
+}
+
+.entry:last-child {
+  border-bottom: none;
+}
+
+.entry-year {
+  font-weight: 700;
+  color: #111;
+}
+
+.entry-body {
+  display: grid;
+  gap: 4px;
+}
+
+.entry-title {
+  font-weight: 600;
+  color: #111;
+}
+
+.entry-desc {
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list li {
+  padding: 4px 0;
+  color: #333;
+}
+
+/* Tech stack grid */
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.tech-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+}
+
+.tech-item i {
+  font-size: 20px;
+  width: 24px;
+  text-align: center;
+}
+
+.tech-item span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1f1f1f;
+}
+
+/* Color hints per tech */
+.tech-item.js i { color: #f7df1e; }
+.tech-item.html i { color: #e34f26; }
+.tech-item.css i { color: #1572b6; }
+.tech-item.react i { color: #61dafb; }
+.tech-item.ts i { color: #3178c6; }
+.tech-item.tailwind i { color: #06b6d4; }
+.tech-item.node i { color: #68a063; }
+.tech-item.express i { color: #444444; }
+.tech-item.mysql i { color: #00758f; }
+.tech-item.sql i { color: #6b7280; }
+.tech-item.postgres i { color: #336791; }
+.tech-item.git i { color: #f34f29; }
+.tech-item.github i { color: #333333; }
+
+@media (min-width: 600px) {
+  .tech-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (min-width: 992px) {
+  .tech-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media (min-width: 600px) {
+  .columns {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  main {
+    flex-direction: row;
+    align-items: stretch; /* asegura igual altura de hijos */
+    justify-content: space-between;
+  }
+  aside {
+    width: 40%;
+  }
+  main > section {
+    width: 60%;
+  }
+}
+
+/* Portátil/Escritorio */
+@media (min-width: 1024px) {
+  aside {
+    width: 35%;
+  }
+  main > section {
+    width: 65%;
+  }
+}
+.nombres {
+  font-size: 3.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: left;
+  margin: 0;
+}
+
+.apellidos {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #111;
+  text-align: left;
+  margin: 0;
+}
+
+.name-divider {
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(to right, #111, #888);
+  margin: 8px 0 16px;
+}
+
+search {
+  display: block;
+  background: #e5e5e5;
+  padding: 20px 24px;
+  border-radius: 4px;
+  box-shadow: inset 0 -1px 0 rgba(0,0,0,0.2);
+}

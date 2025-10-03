@@ -1,3 +1,4 @@
+/* Reset básico y tipografía */
 html, body {
   margin: 0;
   padding: 0;
@@ -11,6 +12,7 @@ html, body {
   box-sizing: border-box;
 }
 
+/* Layout principal del currículo */
 main {
   width: 100%;
   max-width: 1200px;
@@ -29,6 +31,7 @@ main {
 
 
 
+/* Panel lateral (aside) con fondo oscuro */
 aside {
   width: 100%;
   padding: 20px;
@@ -36,18 +39,21 @@ aside {
   color: aliceblue;
 }
 
+/* Imagen de perfil (circular, responsiva) */
 img {
   border-radius: 50%;
   width: 100%;
   height: auto;
   object-fit: cover;
 }
+/* Línea divisoria decorativa */
 .divider {
   height: 1px;
   width: 100%;
   background: linear-gradient(to right, transparent, rgba(255,255,255,0.4), transparent);
   margin: 16px 0;
 }
+/* Tarjeta de contenido principal */
 .content-info {
   width: 100%;
   padding: 20px 24px;
@@ -62,6 +68,7 @@ img {
   line-height: 1.5;
 }
 
+/* Título principal de sección */
 .section-title {
   font-size: 1rem;
   font-weight: 700;
@@ -70,6 +77,7 @@ img {
   margin: 0;
 }
 
+/* Separador interno entre bloques */
 .resume-divider {
   height: 1px;
   width: 100%;
@@ -77,10 +85,12 @@ img {
   margin: 8px 0 12px;
 }
 
+/* Bloque de sección reutilizable */
 .resume-section {
   margin-bottom: 12px;
 }
 
+/* Subtítulo de sección */
 .section-subtitle {
   font-size: 0.9rem;
   font-weight: 700;
@@ -89,6 +99,7 @@ img {
   margin: 0 0 6px;
 }
 
+/* Entrada/ítem con año y contenido en dos columnas */
 .entry {
   display: grid;
   grid-template-columns: 80px 1fr;
@@ -122,12 +133,14 @@ img {
   font-size: 0.95rem;
 }
 
+/* Grid para columnas (listas e idiomas) */
 .columns {
   display: grid;
   grid-template-columns: 1fr;
   gap: 12px;
 }
 
+/* Lista sin viñetas y sin padding/margen */
 .list {
   list-style: none;
   padding: 0;
@@ -139,6 +152,7 @@ img {
   color: #333;
 }
 
+/* Stack de tecnologías: grid y tarjetas */
 /* Tech stack grid */
 .tech-grid {
   display: grid;
@@ -185,20 +199,24 @@ img {
 .tech-item.git i { color: #f34f29; }
 .tech-item.github i { color: #333333; }
 
+/* Responsive: aumentar columnas del grid de tecnologías a 3 */
 @media (min-width: 600px) {
   .tech-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
+/* Responsive: aumentar columnas del grid de tecnologías a 4 */
 @media (min-width: 992px) {
   .tech-grid { grid-template-columns: repeat(4, 1fr); }
 }
 
+/* Responsive: dos columnas para "columns" en pantallas medianas */
 @media (min-width: 600px) {
   .columns {
     grid-template-columns: 1fr 1fr;
   }
 }
 
+/* Tablet: distribución en dos columnas (aside + contenido) */
 /* Tablet */
 @media (min-width: 768px) {
   main {
@@ -214,6 +232,7 @@ img {
   }
 }
 
+/* Portátil/Escritorio: ajustar proporciones del aside y contenido */
 /* Portátil/Escritorio */
 @media (min-width: 1024px) {
   aside {
@@ -223,6 +242,7 @@ img {
     width: 65%;
   }
 }
+/* Nombre principal: estilo tipográfico destacado */
 .nombres {
   font-size: 3.7rem;
   font-weight: 700;
@@ -232,6 +252,7 @@ img {
   margin: 0;
 }
 
+/* Apellidos: segundo nivel de énfasis */
 .apellidos {
   font-size: 2.2rem;
   font-weight: 700;
@@ -242,6 +263,7 @@ img {
   margin: 0;
 }
 
+/* Separador debajo del nombre/apellidos */
 .name-divider {
   height: 2px;
   width: 100%;
@@ -249,6 +271,7 @@ img {
   margin: 8px 0 16px;
 }
 
+/* Caja de búsqueda (selector no usado actualmente) */
 search {
   display: block;
   background: #e5e5e5;

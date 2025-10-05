@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./public/letra_azul.svg" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="./public/letra_azul.svg"
+      type="image/x-icon"
+    />
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,10 +18,12 @@
     <!-- Iconos Font Awesome -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-      integrity="sha512-1r8m3jJ8qf8GfA3eYv2qHkD1YVvZlF2yF6oQdQJk8TnCqJmMZb6GxJfCkzM3f9j6qkzXbIu7fYjzqkqj3tqGg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Backup Font Awesome desde otro CDN -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.4.0/css/all.css"
     />
     <!-- CSS principal -->
     <link rel="stylesheet" href="css/index.css" />
@@ -70,10 +76,13 @@
         <!-- secction para redes sociales -->
         <section>
           <div class="content-aside">
-            <h2>Redes Sociales</h2>
-            <p><strong>Facebook:</strong> Carlos Marquez</p>
-            <p><strong>Twitter:</strong> @carlos27marquez10</p>
-            <p><strong>LinkedIn:</strong> Carlos David Marquez Valencia</p>
+            <div class="cont-ico">
+              <i class="fa-solid fa-share-nodes"></i>
+              <h2>Redes Sociales</h2>
+            </div>
+            <p><i class="fa-brands fa-facebook"></i> <strong>Facebook:</strong> Carlos Marquez</p>
+            <p><i class="fa-brands fa-twitter"></i> <strong>Twitter:</strong> @carlos27marquez10</p>
+            <p><i class="fa-brands fa-linkedin"></i> <strong>LinkedIn:</strong> Carlos David Marquez Valencia</p>
           </div>
           <div class="divider" aria-hidden="true"></div>
         </section>
@@ -232,6 +241,9 @@
               </div>
               <div class="tech-item github">
                 <i class="fa-brands fa-github"></i><span>GitHub</span>
+              </div>
+              <div class="tech-item docker">
+                <i class="fa-brands fa-docker"></i><span>Docker</span>
               </div>
             </div>
           </section>

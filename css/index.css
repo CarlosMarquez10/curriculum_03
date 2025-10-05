@@ -49,6 +49,27 @@ aside strong {
   color: rgba(245, 142, 8, 0.671);
 }
 
+/* Contenedor de icono y título */
+.cont-ico {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.cont-ico img {
+  width: 24px;
+  height: 24px;
+  border-radius: 0;
+}
+
+.cont-ico i {
+  font-size: 20px;
+  color: #1572b6;
+  width: 24px;
+  text-align: center;
+}
+
 .profile-pic {
   text-align: center;
   margin-bottom: 16px;
@@ -213,6 +234,21 @@ img {
 .tech-item.postgres i { color: #336791; }
 .tech-item.git i { color: #f34f29; }
 .tech-item.github i { color: #333333; }
+/* Estilos para iconos en párrafos de redes sociales */
+aside p i {
+  color: #1572b6;
+  margin-right: 8px;
+  width: 16px;
+  text-align: center;
+}
+
+/* Colores específicos para redes sociales */
+aside p i.fa-facebook { color: #1877f2; }
+aside p i.fa-twitter { color: #1da1f2; }
+aside p i.fa-linkedin { color: #0077b5; }
+
+.tech-item.docker i { color: #2496ed; }
+
 
 /* Responsive: aumentar columnas del grid de tecnologías a 3 */
 @media (min-width: 600px) {

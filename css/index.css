@@ -49,10 +49,15 @@ aside strong {
   color: rgba(245, 142, 8, 0.671);
 }
 
+.profile-pic {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
 /* Imagen de perfil (circular, responsiva) */
 img {
   border-radius: 50%;
-  width: 100%;
+  width: 80%;
   height: auto;
   object-fit: cover;
 }

@@ -16,7 +16,7 @@ html, body {
 main {
   width: 100%;
   max-width: 1200px;
-  min-height: 100vh;
+  /* min-height: 1000px; */
   margin: 0 auto;
   margin-bottom: 40px; /* espacio inferior para que no quede pegado */
   padding: 10px;
@@ -38,6 +38,15 @@ aside {
   padding: 20px;
   background: #202020;
   color: aliceblue;
+}
+
+aside h2 {
+  color: #1572b6;
+  margin: 0 0 12px;
+}
+
+aside strong {
+  color: rgba(245, 142, 8, 0.671);
 }
 
 /* Imagen de perfil (circular, responsiva) */

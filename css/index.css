@@ -82,6 +82,27 @@ img {
   height: auto;
   object-fit: cover;
 }
+
+/* Estilo difuminado para la imagen de perfil */
+.profile-pic img {
+  border-radius: 50%;
+  width: 80%;
+  height: auto;
+  object-fit: cover;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  filter: blur(0.5px);
+  transition: filter 0.3s ease, box-shadow 0.3s ease, mask 0.3s ease;
+  position: relative;
+  mask: radial-gradient(circle, black 60%, transparent 100%);
+  -webkit-mask: radial-gradient(circle, black 60%, transparent 100%);
+}
+
+.profile-pic img:hover {
+  filter: blur(0px);
+  box-shadow: 0 0 30px rgba(21, 114, 182, 0.4);
+  mask: radial-gradient(circle, black 70%, transparent 100%);
+  -webkit-mask: radial-gradient(circle, black 70%, transparent 100%);
+}
 /* Línea divisoria decorativa */
 .divider {
   height: 1px;
@@ -234,18 +255,53 @@ img {
 .tech-item.postgres i { color: #336791; }
 .tech-item.git i { color: #f34f29; }
 .tech-item.github i { color: #333333; }
-/* Estilos para iconos en párrafos de redes sociales */
+/* Estilos para iconos en párrafos de aside */
 aside p i {
-  color: #1572b6;
   margin-right: 8px;
   width: 16px;
   text-align: center;
+  color: #007acc;
 }
 
-/* Colores específicos para redes sociales */
-aside p i.fa-facebook { color: #1877f2; }
-aside p i.fa-twitter { color: #1da1f2; }
-aside p i.fa-linkedin { color: #0077b5; }
+/* Iconos de contacto */
+aside p i.fa-envelope {
+  color: #d44638;
+}
+
+aside p i.fa-phone {
+  color: #25d366;
+}
+
+aside p i.fa-location-dot {
+  color: #ea4335;
+}
+
+/* Iconos de referencias */
+aside p i.fa-user {
+  color: #0077b5;
+}
+
+/* Iconos de sitio web */
+aside p i.fa-link {
+  color: #007acc;
+}
+
+/* Iconos de redes sociales */
+aside p i.fa-share-nodes {
+  color: #333;
+}
+
+aside p i.fa-facebook {
+  color: #1877f2;
+}
+
+aside p i.fa-twitter {
+  color: #1da1f2;
+}
+
+aside p i.fa-linkedin {
+  color: #0077b5;
+}
 
 .tech-item.docker i { color: #2496ed; }
 

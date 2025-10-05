@@ -68,6 +68,15 @@ aside strong {
   color: #1572b6;
   width: 24px;
   text-align: center;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cont-ico h2 {
+  margin: 0;
+  line-height: 1.2;
 }
 
 .profile-pic {
@@ -284,6 +293,23 @@ aside p i.fa-user {
 /* Iconos de sitio web */
 aside p i.fa-link {
   color: #007acc;
+}
+
+/* Icono de YouTube */
+.imgyoutube{
+  color: #ff0000;
+}
+
+/* Enlaces en el aside */
+aside a {
+  color: #1572b6;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+aside a:hover {
+  color: #ff0000;
+  text-decoration: underline;
 }
 
 /* Iconos de redes sociales */

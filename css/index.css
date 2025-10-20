@@ -4,7 +4,7 @@ html, body {
   padding: 0;
   font-family: 'Roboto', Arial, sans-serif;
   height: 100%;
-  padding: 40px;
+  padding: 20px;
   background-color: #ffffff;
 }
 
@@ -15,18 +15,16 @@ html, body {
 /* Layout principal del currículo */
 main {
   width: 100%;
-  max-width: 1200px;
-  /* min-height: 1000px; */
+  max-width: 800px; /* Reducido de 1200px para mejor ajuste en PDF */
   margin: 0 auto;
-  margin-bottom: 40px; /* espacio inferior para que no quede pegado */
-  padding: 10px;
-  /* border: 1px solid #000; */
+  margin-bottom: 20px; /* Reducido el espacio inferior */
+  padding: 5px;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   align-items: stretch;
   justify-content: flex-start;
-  gap: 20px;
+  gap: 10px; /* Reducido el espacio entre elementos */
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
@@ -35,14 +33,15 @@ main {
 /* Panel lateral (aside) con fondo oscuro */
 aside {
   width: 100%;
-  padding: 20px;
+  padding: 15px;
   background: #202020;
   color: aliceblue;
 }
 
 aside h2 {
   color: #1572b6;
-  margin: 0 0 12px;
+  margin: 0 0 8px;
+  font-size: 1rem;
 }
 
 aside strong {
@@ -53,20 +52,20 @@ aside strong {
 .cont-ico {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 12px;
+  gap: 5px;
+  margin-bottom: 8px;
 }
 
 .cont-ico img {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   border-radius: 0;
 }
 
 .cont-ico i {
-  font-size: 20px;
+  font-size: 16px;
   color: #1572b6;
-  width: 24px;
+  width: 20px;
   text-align: center;
   line-height: 1;
   display: flex;
@@ -81,13 +80,13 @@ aside strong {
 
 .profile-pic {
   text-align: center;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 /* Imagen de perfil (circular, responsiva) */
 img {
   border-radius: 50%;
-  width: 80%;
+  width: 70%;
   height: auto;
   object-fit: cover;
 }
@@ -95,10 +94,10 @@ img {
 /* Estilo difuminado para la imagen de perfil */
 .profile-pic img {
   border-radius: 50%;
-  width: 80%;
+  width: 70%;
   height: auto;
   object-fit: cover;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
   filter: blur(0.5px);
   transition: filter 0.3s ease, box-shadow 0.3s ease, mask 0.3s ease;
   position: relative;
@@ -108,7 +107,7 @@ img {
 
 .profile-pic img:hover {
   filter: blur(0px);
-  box-shadow: 0 0 30px rgba(21, 114, 182, 0.4);
+  box-shadow: 0 0 20px rgba(21, 114, 182, 0.4);
   mask: radial-gradient(circle, black 70%, transparent 100%);
   -webkit-mask: radial-gradient(circle, black 70%, transparent 100%);
 }
@@ -117,12 +116,12 @@ img {
   height: 1px;
   width: 100%;
   background: linear-gradient(to right, transparent, rgba(255,255,255,0.4), transparent);
-  margin: 16px 0;
+  margin: 12px 0;
 }
 /* Tarjeta de contenido principal */
 .content-info {
   width: 100%;
-  padding: 20px 24px;
+  padding: 15px;
   background: #ffffff;
   border-radius: 6px;
   box-shadow: inset 0 -1px 0 rgba(0,0,0,0.15);
@@ -130,13 +129,14 @@ img {
 
 .content-info p {
   color: #333;
-  margin: 0 0 12px;
-  line-height: 1.5;
+  margin: 0 0 8px;
+  line-height: 1.4;
+  font-size: 0.9rem;
 }
 
 /* Título principal de sección */
 .section-title {
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 700;
   text-transform: uppercase;
   color: #111;
@@ -148,30 +148,30 @@ img {
   height: 1px;
   width: 100%;
   background: linear-gradient(to right, rgba(0,0,0,0.35), rgba(0,0,0,0.1));
-  margin: 8px 0 12px;
+  margin: 6px 0 10px;
 }
 
 /* Bloque de sección reutilizable */
 .resume-section {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 /* Subtítulo de sección */
 .section-subtitle {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 700;
   text-transform: uppercase;
   color: rgba(245, 142, 8, 0.815);
-  margin: 0 0 6px;
+  margin: 0 0 4px;
 }
 
 /* Entrada/ítem con año y contenido en dos columnas */
 .entry {
   display: grid;
-  grid-template-columns: 80px 1fr;
+  grid-template-columns: 70px 1fr;
   align-items: start;
-  gap: 12px;
-  padding: 10px 0;
+  gap: 8px;
+  padding: 6px 0;
   border-bottom: 1px solid rgba(0,0,0,0.15);
 }
 
@@ -182,21 +182,23 @@ img {
 .entry-year {
   font-weight: 700;
   color: #111;
+  font-size: 0.85rem;
 }
 
 .entry-body {
   display: grid;
-  gap: 4px;
+  gap: 2px;
 }
 
 .entry-title {
   font-weight: 600;
   color: #111;
+  font-size: 0.9rem;
 }
 
 .entry-desc {
   color: #333;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
 }
 
 /* Grid para columnas (listas e idiomas) */
@@ -222,32 +224,35 @@ img {
 /* Tech stack grid */
 .tech-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-  margin-top: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 8px;
+  margin-top: 8px;
 }
 
 .tech-item {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 10px 12px;
+  gap: 6px;
+  padding: 6px 8px;
   background: #ffffff;
   border: 1px solid rgba(0,0,0,0.08);
-  border-radius: 8px;
+  border-radius: 6px;
   box-shadow: 0 1px 2px rgba(0,0,0,0.06);
 }
 
 .tech-item i {
-  font-size: 20px;
-  width: 24px;
+  font-size: 16px;
+  width: 20px;
   text-align: center;
 }
 
 .tech-item span {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
   color: #1f1f1f;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* Color hints per tech */
@@ -334,12 +339,16 @@ aside p i.fa-linkedin {
 
 /* Responsive: aumentar columnas del grid de tecnologías a 3 */
 @media (min-width: 600px) {
-  .tech-grid { grid-template-columns: repeat(3, 1fr); }
+  .tech-grid { 
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); 
+  }
 }
 
 /* Responsive: aumentar columnas del grid de tecnologías a 4 */
 @media (min-width: 992px) {
-  .tech-grid { grid-template-columns: repeat(4, 1fr); }
+  .tech-grid { 
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); 
+  }
 }
 
 /* Responsive: dos columnas para "columns" en pantallas medianas */

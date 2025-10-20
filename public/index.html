@@ -1,89 +1,196 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
-
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/12.4.0/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/12.4.0/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/12.4.0/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/12.4.0/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/12.4.0/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/12.4.0/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/12.4.0/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/12.4.0/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/12.4.0/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/12.4.0/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./public/letra_azul.svg" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.0/css/all.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <title>Currículum Carlos Márquez</title>
   </head>
   <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+    <main>
+      <aside>
+        <section class="profile-pic">
+          <img src="./public/perfil.jpg" alt="Foto de perfil" />
+        </section>
+        <div class="divider"></div>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        <section>
+          <div class="content-aside">
+            <div class="cont-ico">
+              <i class="fa-solid fa-address-book"></i>
+              <h2>Contacto</h2>
+            </div>
+            <p><i class="fa-solid fa-envelope"></i> carlos27marquez10@gmail.com</p>
+            <p><i class="fa-solid fa-phone"></i> 3216154603</p>
+            <p><i class="fa-solid fa-location-dot"></i> Calle 27a #9-38, Cúcuta, Colombia</p>
+          </div>
+          <div class="divider"></div>
+        </section>
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
+        <section>
+          <div class="content-aside">
+            <div class="cont-ico">
+              <i class="fa-solid fa-users"></i>
+              <h2>Referencias</h2>
+            </div>
+            <p><i class="fa-solid fa-user"></i> Jaime Alvarez, Tecnólogo Cgo, Inmel</p>
+            <p><i class="fa-solid fa-user"></i> Diego Medina, Tecnólogo Cgo, Consorcio CI</p>
+          </div>
+          <div class="divider"></div>
+        </section>
+
+        <section>
+          <div class="content-aside">
+            <div class="cont-ico">
+              <i class="fa-solid fa-globe"></i>
+              <h2>Sitio Web</h2>
+            </div>
+            <p><i class="fa-solid fa-link"></i> <a href="http://www.asolounbit.com" target="_blank">www.asolounbit.com</a></p>
+            <p><i class="fa-brands fa-youtube imgyoutube"></i> <a href="https://www.youtube.com/@asolounbit" target="_blank">@asolounbit</a></p>
+          </div>
+          <div class="divider"></div>
+        </section>
+
+        <section>
+          <div class="content-aside">
+            <div class="cont-ico">
+              <i class="fa-solid fa-share-nodes"></i>
+              <h2>Redes Sociales</h2>
+            </div>
+            <p><i class="fa-brands fa-facebook"></i> Carlos Márquez</p>
+            <p><i class="fa-brands fa-twitter"></i> @carlos27marquez10</p>
+            <p><i class="fa-brands fa-linkedin"></i> Carlos David Márquez Valencia</p>
+          </div>
+          <div class="divider"></div>
+        </section>
+      </aside>
+
+      <section>
+        <section>
+          <h1 class="nombres">Carlos David</h1>
+          <h1 class="apellidos">Márquez Valencia</h1>
+        </section>
+
+        <div class="name-divider"></div>
+
+        <div class="content-info">
+          <h3 class="section-title">Ingeniería de Sistemas</h3>
+          <div class="resume-divider"></div>
+
+          <section class="resume-section">
+            <h4 class="section-subtitle">Sobre mí</h4>
+            <p>
+              Soy Carlos Márquez, Ingeniero de Sistemas. Vivo en Cúcuta y me apasiona la programación. Desde muy joven me ha interesado la tecnología y la resolución de problemas.
+            </p>
+          </section>
+
+          <div class="resume-divider"></div>
+
+          <section class="resume-section">
+            <h4 class="section-subtitle">Experiencia</h4>
+            <div class="entry">
+              <div class="entry-year">2017 - 2025</div>
+              <div class="entry-body">
+                <div class="entry-title">Tecnólogo y Desarrollador Web</div>
+                <div class="entry-desc">
+                  Desarrollo de sitios web y aplicaciones web para la empresa Inmel, donde me desempeñé como desarrollador web.
+                </div>
+              </div>
+            </div>
+            <div class="entry">
+              <div class="entry-year">2025</div>
+              <div class="entry-body">
+                <div class="entry-title">Tecnólogo e Ingeniero de Sistemas</div>
+                <div class="entry-desc">
+                  Desempeñado como Ingeniero de Sistemas en la empresa Inmel, realizando labores de desarrollo de software y soluciones relacionadas con la infraestructura de sistemas y los procesos internos de la empresa.
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <div class="resume-divider"></div>
+
+          <section class="resume-section">
+            <h4 class="section-subtitle">Educación</h4>
+            <div class="entry">
+              <div class="entry-year">2017 - 2020</div>
+              <div class="entry-body">
+                <div class="entry-title">Análisis y Diseño de Sistemas de Información (SENA)</div>
+              </div>
+            </div>
+            <div class="entry">
+              <div class="entry-year">2020 - 2025</div>
+              <div class="entry-body">
+                <div class="entry-title">Ingeniería de Sistemas</div>
+                <div class="entry-desc">Universidad Nacional Abierta y a Distancia (UNAD)</div>
+              </div>
+            </div>
+            <div class="entry">
+              <div class="entry-year">2025</div>
+              <div class="entry-body">
+                <div class="entry-title">Bootcamp de Desarrollo Web</div>
+                <div class="entry-desc">Instituto Talento Tech</div>
+              </div>
+            </div>
+          </section>
+
+          <div class="resume-divider"></div>
+
+          <section class="resume-section">
+            <h4 class="section-subtitle">Habilidades</h4>
+            <div class="columns">
+              <ul class="list">
+                <li>Liderazgo</li>
+                <li>Comunicación</li>
+                <li>Toma de decisiones</li>
+              </ul>
+              <ul class="list">
+                <li>Gestión del tiempo</li>
+                <li>Trabajo en equipo</li>
+                <li>Pensamiento estratégico</li>
+              </ul>
+            </div>
+          </section>
+
+          <div class="resume-divider"></div>
+
+          <section class="resume-section">
+            <h4 class="section-subtitle">Idiomas</h4>
+            <div class="columns">
+              <div>Español (Nativo)</div>
+              <div>Inglés (Nivel B1)</div>
+            </div>
+          </section>
+
+          <div class="resume-divider"></div>
+
+          <section class="resume-section">
+            <h4 class="section-subtitle">Stack de Tecnologías</h4>
+            <div class="tech-grid">
+              <div class="tech-item js"><i class="fa-brands fa-js"></i><span>JavaScript</span></div>
+              <div class="tech-item html"><i class="fa-brands fa-html5"></i><span>HTML</span></div>
+              <div class="tech-item css"><i class="fa-brands fa-css3-alt"></i><span>CSS</span></div>
+              <div class="tech-item react"><i class="fa-brands fa-react"></i><span>React</span></div>
+              <div class="tech-item ts"><i class="fa-solid fa-code"></i><span>TypeScript</span></div>
+              <div class="tech-item tailwind"><i class="fa-solid fa-code"></i><span>Tailwind CSS</span></div>
+              <div class="tech-item node"><i class="fa-brands fa-node-js"></i><span>Node.js</span></div>
+              <div class="tech-item express"><i class="fa-solid fa-server"></i><span>Express</span></div>
+              <div class="tech-item mysql"><i class="fa-solid fa-database"></i><span>MySQL</span></div>
+              <div class="tech-item sql"><i class="fa-solid fa-database"></i><span>SQL</span></div>
+              <div class="tech-item postgres"><i class="fa-solid fa-database"></i><span>PostgreSQL</span></div>
+              <div class="tech-item git"><i class="fa-brands fa-git-alt"></i><span>Git</span></div>
+              <div class="tech-item github"><i class="fa-brands fa-github"></i><span>GitHub</span></div>
+              <div class="tech-item docker"><i class="fa-brands fa-docker"></i><span>Docker</span></div>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
   </body>
 </html>

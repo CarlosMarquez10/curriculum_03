@@ -1,0 +1,424 @@
+/* Reset básico y tipografía */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', Arial, sans-serif;
+  height: 100%;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Layout principal del currículo */
+main {
+  width: 100%;
+  max-width: 800px; /* Reducido de 1200px para mejor ajuste en PDF */
+  margin: 0 auto;
+  margin-bottom: 20px; /* Reducido el espacio inferior */
+  padding: 5px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 10px; /* Reducido el espacio entre elementos */
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+
+
+/* Panel lateral (aside) con fondo oscuro */
+aside {
+  width: 100%;
+  padding: 15px;
+  background: #202020;
+  color: aliceblue;
+}
+
+aside h2 {
+  color: #1572b6;
+  margin: 0 0 8px;
+  font-size: 1rem;
+}
+
+aside strong {
+  color: rgba(245, 142, 8, 0.671);
+}
+
+/* Contenedor de icono y título */
+.cont-ico {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 8px;
+}
+
+.cont-ico img {
+  width: 20px;
+  height: 20px;
+  border-radius: 0;
+}
+
+.cont-ico i {
+  font-size: 16px;
+  color: #1572b6;
+  width: 20px;
+  text-align: center;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cont-ico h2 {
+  margin: 0;
+  line-height: 1.2;
+}
+
+.profile-pic {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+/* Imagen de perfil (circular, responsiva) */
+img {
+  border-radius: 50%;
+  width: 70%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Estilo difuminado para la imagen de perfil */
+.profile-pic img {
+  border-radius: 50%;
+  width: 70%;
+  height: auto;
+  object-fit: cover;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  filter: blur(0.5px);
+  transition: filter 0.3s ease, box-shadow 0.3s ease, mask 0.3s ease;
+  position: relative;
+  mask: radial-gradient(circle, black 60%, transparent 100%);
+  -webkit-mask: radial-gradient(circle, black 60%, transparent 100%);
+}
+
+.profile-pic img:hover {
+  filter: blur(0px);
+  box-shadow: 0 0 20px rgba(21, 114, 182, 0.4);
+  mask: radial-gradient(circle, black 70%, transparent 100%);
+  -webkit-mask: radial-gradient(circle, black 70%, transparent 100%);
+}
+/* Línea divisoria decorativa */
+.divider {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(to right, transparent, rgba(255,255,255,0.4), transparent);
+  margin: 12px 0;
+}
+/* Tarjeta de contenido principal */
+.content-info {
+  width: 100%;
+  padding: 15px;
+  background: #ffffff;
+  border-radius: 6px;
+  box-shadow: inset 0 -1px 0 rgba(0,0,0,0.15);
+}
+
+.content-info p {
+  color: #333;
+  margin: 0 0 8px;
+  line-height: 1.4;
+  font-size: 0.9rem;
+}
+
+/* Título principal de sección */
+.section-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #111;
+  margin: 0;
+}
+
+/* Separador interno entre bloques */
+.resume-divider {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(to right, rgba(0,0,0,0.35), rgba(0,0,0,0.1));
+  margin: 6px 0 10px;
+}
+
+/* Bloque de sección reutilizable */
+.resume-section {
+  margin-bottom: 10px;
+}
+
+/* Subtítulo de sección */
+.section-subtitle {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: rgba(245, 142, 8, 0.815);
+  margin: 0 0 4px;
+}
+
+/* Entrada/ítem con año y contenido en dos columnas */
+.entry {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  align-items: start;
+  gap: 8px;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.15);
+}
+
+.entry:last-child {
+  border-bottom: none;
+}
+
+.entry-year {
+  font-weight: 700;
+  color: #111;
+  font-size: 0.85rem;
+}
+
+.entry-body {
+  display: grid;
+  gap: 2px;
+}
+
+.entry-title {
+  font-weight: 600;
+  color: #111;
+  font-size: 0.9rem;
+}
+
+.entry-desc {
+  color: #333;
+  font-size: 0.85rem;
+}
+
+/* Grid para columnas (listas e idiomas) */
+.columns {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+/* Lista sin viñetas y sin padding/margen */
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list li {
+  padding: 4px 0;
+  color: #333;
+}
+
+/* Stack de tecnologías: grid y tarjetas */
+/* Tech stack grid */
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.tech-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 8px;
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 6px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+}
+
+.tech-item i {
+  font-size: 16px;
+  width: 20px;
+  text-align: center;
+}
+
+.tech-item span {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1f1f1f;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Color hints per tech */
+.tech-item.js i { color: #f7df1e; }
+.tech-item.html i { color: #e34f26; }
+.tech-item.css i { color: #1572b6; }
+.tech-item.react i { color: #61dafb; }
+.tech-item.ts i { color: #3178c6; }
+.tech-item.tailwind i { color: #06b6d4; }
+.tech-item.node i { color: #68a063; }
+.tech-item.express i { color: #444444; }
+.tech-item.mysql i { color: #00758f; }
+.tech-item.sql i { color: #6b7280; }
+.tech-item.postgres i { color: #336791; }
+.tech-item.git i { color: #f34f29; }
+.tech-item.github i { color: #333333; }
+/* Estilos para iconos en párrafos de aside */
+aside p i {
+  margin-right: 8px;
+  width: 16px;
+  text-align: center;
+  color: #007acc;
+}
+
+/* Iconos de contacto */
+aside p i.fa-envelope {
+  color: #d44638;
+}
+
+aside p i.fa-phone {
+  color: #25d366;
+}
+
+aside p i.fa-location-dot {
+  color: #ea4335;
+}
+
+/* Iconos de referencias */
+aside p i.fa-user {
+  color: #0077b5;
+}
+
+/* Iconos de sitio web */
+aside p i.fa-link {
+  color: #007acc;
+}
+
+/* Icono de YouTube */
+.imgyoutube{
+  color: #ff0000;
+}
+
+/* Enlaces en el aside */
+aside a {
+  color: #1572b6;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+aside a:hover {
+  color: #ff0000;
+  text-decoration: underline;
+}
+
+/* Iconos de redes sociales */
+aside p i.fa-share-nodes {
+  color: #333;
+}
+
+aside p i.fa-facebook {
+  color: #1877f2;
+}
+
+aside p i.fa-twitter {
+  color: #1da1f2;
+}
+
+aside p i.fa-linkedin {
+  color: #0077b5;
+}
+
+.tech-item.docker i { color: #2496ed; }
+
+
+/* Responsive: aumentar columnas del grid de tecnologías a 3 */
+@media (min-width: 600px) {
+  .tech-grid { 
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); 
+  }
+}
+
+/* Responsive: aumentar columnas del grid de tecnologías a 4 */
+@media (min-width: 992px) {
+  .tech-grid { 
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); 
+  }
+}
+
+/* Responsive: dos columnas para "columns" en pantallas medianas */
+@media (min-width: 600px) {
+  .columns {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Tablet: distribución en dos columnas (aside + contenido) */
+/* Tablet */
+@media (min-width: 768px) {
+  main {
+    flex-direction: row;
+    align-items: stretch; /* asegura igual altura de hijos */
+    justify-content: space-between;
+  }
+  aside {
+    width: 40%;
+  }
+  main > section {
+    width: 60%;
+  }
+}
+
+/* Portátil/Escritorio: ajustar proporciones del aside y contenido */
+/* Portátil/Escritorio */
+@media (min-width: 1024px) {
+  aside {
+    width: 35%;
+  }
+  main > section {
+    width: 65%;
+  }
+}
+/* Nombre principal: estilo tipográfico destacado */
+.nombres {
+  font-size: 3.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: left;
+  margin: 0;
+  color: rgba(255, 154, 21, 0.623);
+}
+
+/* Apellidos: segundo nivel de énfasis */
+.apellidos {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #111;
+  text-align: left;
+  margin: 0;
+}
+
+/* Separador debajo del nombre/apellidos */
+.name-divider {
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(to right, #111, #888);
+  margin: 8px 0 16px;
+}
+
+/* Caja de búsqueda (selector no usado actualmente) */
+search {
+  display: block;
+  background: #e5e5e5;
+  padding: 20px 24px;
+  border-radius: 4px;
+  box-shadow: inset 0 -1px 0 rgba(0,0,0,0.2);
+}

@@ -1,0 +1,15 @@
+{
+  "name": "curriculum-carlos-marquez",
+  "version": "1.0.0",
+  "description": "Curriculum Vitae de Carlos Marquez",
+  "main": "index.html",
+  "scripts": {
+    "build": "cp -f index.html public/ && mkdir -p public/css && cp -f css/*.css public/css/"
+  },
+  "keywords": [
+    "curriculum",
+    "portfolio"
+  ],
+  "author": "Carlos Marquez",
+  "license": "ISC"
+}
